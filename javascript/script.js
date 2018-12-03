@@ -32,7 +32,8 @@ if (event.which ===13) {
     $(this).val ("");
 // create a new li to add to the task list
 
-$("ul").append ("<li><span><i class= 'fa fa-trash'></i><span> " + todoText+"</li>");
+$("ul").append (`<li id="el-${todoText.replace(' ', '_')}"><span><i class= "fa fa-trash"></i></span></li>`);
+$(`#el-${todoText.replace(' ', '_')}`).append(' ' +todoText);
 
 
 }
